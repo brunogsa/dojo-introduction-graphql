@@ -12,10 +12,10 @@ This repository contains some GraphQL code on both Back and Front-end.
 ```sh
 # My current environment
 
-→ npm -v
+$ npm -v
 6.4.1
 
-→ node -v
+$ node -v
 v10.14.1
 ```
 
