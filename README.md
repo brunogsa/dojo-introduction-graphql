@@ -58,7 +58,7 @@ $ npm run lint:graphql
 Solution on branch `solution/schema`.
 
 
-## Hands-on 2/3: Plugging GraphQL into an existing RESTful API
+## Hands-on 2/3: Plugging GraphQL into your Back-end
 
 Now, implement your resolvers at `backend/resolvers/`!
 
