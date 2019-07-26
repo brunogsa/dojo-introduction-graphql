@@ -1,0 +1,46 @@
+scalar Email
+scalar PositiveInt
+
+enum Profession {
+  FRONTEND
+  BACKEND
+  DEVOPS
+  UX
+  PO
+  TESTER
+}
+
+type Candidate {
+  id: ID!
+  name: String!
+  email: Email!
+  profession: Profession!
+}
+
+type Company {
+  id: ID!
+  name: String!
+  openJobAds: [ID!]!
+}
+
+type JobAd {
+  id: ID!
+  title: String!
+  description: String
+  requiredProfession: Profession!
+  remainingVacancies: PositiveInt
+}
+
+type Query {
+  """pong"""
+  ping: String!
+
+  """TODO"""
+  candidate: String
+
+  """TODO"""
+  company: String
+
+  """TODO"""
+  jobAd: String
+}

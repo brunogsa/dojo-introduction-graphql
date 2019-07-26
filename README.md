@@ -40,13 +40,13 @@ const company = {
 const jobAd = {
   id:                 string | number,
   title:              string,
-  description:        string,
+  description:        string,  // Optional
   requiredProfession: 'frontend' | 'backend' | 'devops' | 'ux' | 'po' | 'tester',
   remainingVacancies:  number,
 };
 ```
 
-Build your GraphQL schema at `backend/api.graphql`!
+Build your GraphQL schema at `backend/schema.graphql`!
 
 You can test it with:
 ```sh
