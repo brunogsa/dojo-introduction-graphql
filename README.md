@@ -75,8 +75,7 @@ $ npm install
 $ npm run test:graphql
 ```
 
-Reference:
-- 
+Reference: ?
 
 Solution on branch `solution/backend`.
 
