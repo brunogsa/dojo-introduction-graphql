@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/brunogsa/dojo-introduction-graphql/issues"
   },
-  "homepage": "https://github.com/brunogsa/dojo-introduction-graphql#readme"
+  "homepage": "https://github.com/brunogsa/dojo-introduction-graphql#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
