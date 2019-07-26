@@ -1,0 +1,26 @@
+{
+  "name": "dojo-introduction-graphql-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint:graphql": "echo TODO",
+    "test:graphql": "echo TODO"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunogsa/dojo-introduction-graphql.git"
+  },
+  "keywords": [
+    "graphql",
+    "node",
+    "express"
+  ],
+  "author": "Bruno Agostini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunogsa/dojo-introduction-graphql/issues"
+  },
+  "homepage": "https://github.com/brunogsa/dojo-introduction-graphql#readme"
+}
