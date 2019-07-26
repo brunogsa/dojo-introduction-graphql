@@ -75,7 +75,9 @@ $ npm install
 $ npm run test:graphql
 ```
 
-Reference: ?
+Reference:
+- https://graphql.org/learn/execution/
+- https://www.apollographql.com/docs/graphql-tools/resolvers/
 
 Solution on branch `solution/backend`.
 
