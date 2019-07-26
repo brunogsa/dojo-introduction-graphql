@@ -59,7 +59,8 @@ $ npm install
 $ npm run lint:graphql
 ```
 
-Reference: https://graphql.org/learn/schema/
+Reference:
+- https://graphql.org/learn/schema/
 
 Solution on branch `solution/schema`.
 
@@ -109,5 +110,7 @@ No data, right? :B
 Go and implement your GraphQL query at `frontend/services/candidate-profiles.js`!  
 Test if it worked reloading your app!
 
-Reference: ?  
+Reference:
+- ?
+
 Solution on branch `solution/frontend`.
