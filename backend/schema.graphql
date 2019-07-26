@@ -1,4 +1,5 @@
 scalar Email
+scalar URL
 scalar PositiveInt
 
 enum Profession {
@@ -15,11 +16,13 @@ type Candidate {
   name: String!
   email: Email!
   profession: Profession!
+  photo: URL!
 }
 
 type Company {
   id: ID!
   name: String!
+  photo: URL!
   openJobAds: [ID!]!
 }
 

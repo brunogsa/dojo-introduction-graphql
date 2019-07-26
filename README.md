@@ -29,11 +29,13 @@ const candidate = {
   name:       string,
   email:      string,
   profession: 'frontend' | 'backend' | 'devops' | 'ux' | 'po' | 'tester',
+  photo:      string,
 };
 
 const company = {
   id:         string | number,
   name:       string,
+  photo:      string,
   openJobAds: array of jobAd IDs,
 };
 
