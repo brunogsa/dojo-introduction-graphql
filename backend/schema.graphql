@@ -17,6 +17,7 @@ type Candidate {
   email: Email!
   profession: Profession!
   photo: URL!
+  following: [ID!]!
 }
 
 type Company {
@@ -30,6 +31,7 @@ type JobAd {
   id: ID!
   title: String!
   description: String
+  forCompany: ID!
   requiredProfession: Profession!
   remainingVacancies: PositiveInt
 }

@@ -30,6 +30,7 @@ const candidate = {
   email:      string,
   profession: 'frontend' | 'backend' | 'devops' | 'ux' | 'po' | 'tester',
   photo:      string,
+  following:  array of candidate ID,
 };
 
 const company = {
@@ -43,6 +44,7 @@ const jobAd = {
   id:                 string | number,
   title:              string,
   description:        string,  // Optional
+  forCompany:         company ID,
   requiredProfession: 'frontend' | 'backend' | 'devops' | 'ux' | 'po' | 'tester',
   remainingVacancies:  number,
 };
@@ -57,13 +59,14 @@ $ npm install
 $ npm run lint:graphql
 ```
 
-Reference: https://graphql.org/learn/schema/  
+Reference: https://graphql.org/learn/schema/
+
 Solution on branch `solution/schema`.
 
 
 ## Hands-on 2/3: Plugging GraphQL into your Back-end
 
-Now, implement your resolvers at `backend/resolvers/`!
+Now, implement your resolvers at `backend/resolvers/`!  
 
 You can test it with:
 ```sh
@@ -72,7 +75,9 @@ $ npm install
 $ npm run test:graphql
 ```
 
-Reference: ?  
+Reference:
+- 
+
 Solution on branch `solution/backend`.
 
 

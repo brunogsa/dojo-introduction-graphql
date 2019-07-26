@@ -1,1 +1,30 @@
-[]
+{
+  "666": {
+    "name": "Nezuko",
+    "email": "nezuko@hotmail.com",
+    "profession": "FRONTEND",
+    "photo": "https://i.ytimg.com/vi/ND_0OAYOm6k/maxresdefault.jpg",
+    "following": []
+  },
+  "1": {
+    "name": "Bob Esponja",
+    "email": "sponge.bob@gmail.com",
+    "profession": "PO",
+    "photo": "https://jovemnerd.com.br/wp-content/uploads/2017/12/bob-esponja-filme-adiado-760x428.jpg",
+    "following": ["666","69","9001","1"]
+  },
+  "69": {
+    "name": "Sandra Bullock",
+    "email": "sandrinha@gmail.com",
+    "profession": "TESTER",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSItJravTWRBg3TDTg4aWjL8MtZe7D0_EBMt8uPn5dl3OuIwr4Krg",
+    "following": ["666"]
+  },
+  "9001": {
+    "name": "Goku",
+    "email": "goku@gmail.com",
+    "profession": "DEVOPS",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFLET-BLEP1nTSwR2Pu5sRQj8XHPOJIxuA3JMESFXDJDugHkj",
+    "following": ["1","666","69"]
+  }
+}

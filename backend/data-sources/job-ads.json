@@ -1,1 +1,30 @@
-[]
+{
+  "1": {
+    "title": "Demon's work",
+    "description": "Kill some humans, kick some puppies etc",
+    "forCompany": 666,
+    "requiredProfession": "FRONTEND",
+    "remainingVacancies": 1
+  },
+  "2": {
+    "title": "Game Infra developer",
+    "description": "Scale lots of servers with sticky session IDs",
+    "forCompany": 1,
+    "requiredProfession": "DEVOPS",
+    "remainingVacancies": 666
+  },
+  "3": {
+    "title": "Politician",
+    "description": "Rob from the people, laught at poor's face",
+    "forCompany": 666,
+    "requiredProfession": "PO",
+    "remainingVacancies": 1
+  },
+  "4": {
+    "title": "Easter Egg Expert",
+    "description": "Make people happy with konami codes and easter eggs",
+    "forCompany": 1,
+    "requiredProfession": "TESTER",
+    "remainingVacancies": 0
+  }
+}
