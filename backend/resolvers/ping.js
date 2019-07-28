@@ -1,5 +1,5 @@
-const resolver = () => {
-  return 'pong';
+const resolver = {
+  ping: () => 'pong',
 };
 
 module.exports = resolver;

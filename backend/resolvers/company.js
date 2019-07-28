@@ -1,7 +1,7 @@
 const companiesData = require('../data-sources/companies.json');
 
-const resolver = () => {
-  return 'TODO';
+const resolver = {
+  company: () => 'TODO',
 };
 
 module.exports = resolver;

@@ -1,19 +1,19 @@
 const fs = require('fs');
 
-const queriesResolvers = {};
+let resolvers = {};
 
 fs.readdirSync('./resolvers')
-  .map(
-    fullName => fullName.split('.')[0]
-  )
   .filter(
-    fileName => fileName !== 'index'
+    fileName => fileName !== 'index.js'
   )
   .forEach(fileName => {
-    queriesResolvers[fileName] = require(`./${fileName}`);
+    const fileResolvers = require('./' + fileName);
+
+    resolvers = {
+      ...resolvers,
+      ...fileResolvers,
+    };
   });
 
 
-module.exports = {
-  Query: queriesResolvers,
-};
+module.exports = resolvers;
