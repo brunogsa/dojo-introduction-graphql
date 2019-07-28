@@ -37,15 +37,12 @@ type JobAd {
 }
 
 type Query {
-  """pong"""
+  """Returns an incredible expected response"""
   ping: String!
 
-  """TODO"""
-  candidate: String
+  """Get a candidate by either `id` or `email`"""
+  candidate(id: ID, email: Email): Candidate
 
-  """TODO"""
-  company: String
-
-  """TODO"""
-  jobAd: String
+  # TODO: company query
+  # TODO: jobAd query
 }
