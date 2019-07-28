@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon -e js,json,graphql server.js",
     "lint:graphql": "node .graphql-schema-validator.js && echo 'Valid GraphQL schema!'",
     "test:graphql": "echo TODO"
   },
@@ -24,8 +24,11 @@
   },
   "homepage": "https://github.com/brunogsa/dojo-introduction-graphql#readme",
   "dependencies": {
-    "apollo-server-express": "^2.7.1",
     "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
     "graphql": "^14.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
