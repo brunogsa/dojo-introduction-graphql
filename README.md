@@ -67,7 +67,7 @@ Solution on branch `solution/schema`.
 
 ## Hands-on 2/3: Plugging GraphQL into your Back-end
 
-Now, implement your resolvers at `backend/resolvers/`!  
+Now, implement your resolvers at `backend/resolvers/`!
 
 You can test it with:
 ```sh
@@ -78,7 +78,9 @@ $ npm run test:graphql
 
 Reference:
 - https://graphql.org/learn/execution/
-- https://www.apollographql.com/docs/graphql-tools/resolvers/
+- https://graphql.org/graphql-js/basic-types/
+- https://graphql.org/graphql-js/passing-arguments/
+- https://graphql.org/graphql-js/object-types/
 
 Solution on branch `solution/backend`.
 
