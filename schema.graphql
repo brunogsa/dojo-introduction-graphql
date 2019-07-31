@@ -1,40 +1,11 @@
-scalar EmailAddress
-scalar URL
 scalar NonNegativeInt
-
-enum Profession {
-  FRONTEND
-  BACKEND
-  DEVOPS
-  UX
-  PO
-  TESTER
-}
+# TODO
 
 type Candidate {
-  id: ID!
-  name: String!
-  email: EmailAddress!
-  profession: Profession!
-  photo: URL!
-  following: [Candidate!]!
+  # TODO
 }
 
-type Company {
-  id: ID!
-  name: String!
-  photo: URL!
-  openJobAds: [JobAd!]!
-}
-
-type JobAd {
-  id: ID!
-  title: String!
-  description: String
-  forCompany: Company!
-  requiredProfession: Profession!
-  remainingVacancies: NonNegativeInt!
-}
+# TODO
 
 type Query {
   """Returns an incredible expected response"""
