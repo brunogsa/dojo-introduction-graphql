@@ -40,12 +40,7 @@ type Query {
   """Returns an incredible expected response"""
   ping: String!
 
-  """Get all candidates"""
-  candidates: [Candidate!]!
-
-  """Get all companies"""
-  companies: [Company!]!
-
-  """Get all job ads"""
-  jobAds: [JobAd!]!
+  # TODO candidates
+  # TODO companies
+  # TODO jobAds
 }
