@@ -22,6 +22,8 @@ v10.14.1
 
 ## Hands-on 1/3: My first GraphQL Schema
 
+Go to branch `develop/1`.
+
 This is your data:
 ```js
 const candidate = {
@@ -68,6 +70,8 @@ Solution on branch `solution/1`.
 
 ## Hands-on 2/3: My first Resolver
 
+Go to branch `develop/2`.
+
 Resolvers are functions that tell GraphQL how to provide your data.  
 - You need 1 resolver for each query
 - You need 1 resolver for each field of a type you defined in your `schema.graphql`
@@ -95,11 +99,14 @@ Solution on branch `solution/2`.
 
 ## Hands-on 3/3: Passing parameters to Resolvers
 
+Go to branch `develop/3`.
+
 Implement 3 new queries for your users:
 - One that retrieves data from a `candidate`, either by `id` or `email`
 - One that retrieves data from a `company`, given its `id`
 - One that retrieves data from a `jobAd`, given its `id`
 
+Again: check your `services/` to reuse you already existing code!  
 More automated tests were added, so feel free to run the same scripts :)
 
 Reference:
