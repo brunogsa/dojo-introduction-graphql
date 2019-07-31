@@ -43,18 +43,9 @@ type Query {
   """Get all candidates"""
   candidates: [Candidate!]!
 
-  """Get a candidate by either `id` or `email`"""
-  candidate(id: ID, email: EmailAddress): Candidate
-
   """Get all companies"""
   companies: [Company!]!
 
-  """Get a specific company"""
-  company(id: ID!): Company
-
   """Get all job ads"""
   jobAds: [JobAd!]!
-
-  """Get a specific job ad"""
-  jobAd(id: ID!): JobAd
 }

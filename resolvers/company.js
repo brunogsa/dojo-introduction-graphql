@@ -1,6 +1,5 @@
 const {
   getAllCompanies,
-  getCompanyById,
 } = require('../services/companies');
 
 const { getJobAdById } = require('../services/jobAds');
@@ -9,10 +8,7 @@ const resolver = {
   Query: {
     companies: () => getAllCompanies(),
 
-    company: (_, params, req, advancedDetails) => {
-      const { id } = params;
-      return getCompanyById(id);
-    },
+    // TODO: company: (_, params, req, advancedDetails) => {},
   },
 
   Company: {

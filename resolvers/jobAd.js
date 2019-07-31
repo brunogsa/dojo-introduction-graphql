@@ -1,6 +1,5 @@
 const {
   getAllJobAds,
-  getJobAdById,
 } = require('../services/jobAds');
 
 const { getCompanyById } = require('../services/companies');
@@ -9,10 +8,7 @@ const resolver = {
   Query: {
     jobAds: () => getAllJobAds(),
 
-    jobAd: (_, params, req, advancedDetails) => {
-      const { id } = params;
-      return getJobAdById(id);
-    },
+    // TODO jobAd: (_, params, req, advancedDetails) => {},
   },
 
   JobAd: {
