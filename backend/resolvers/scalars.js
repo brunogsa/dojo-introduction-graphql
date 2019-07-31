@@ -1,24 +1,16 @@
 /**
- * @see: https://graphql.org/graphql-js/type/#graphqlschema
+ * @see: https://github.com/Urigo/graphql-scalars
  */
-const { GraphQLScalarType } = require('graphql');
+const {
+  EmailAddress,
+  URL,
+  NonNegativeInt,
+} = require('graphql-scalars');
 
 const resolver = {
-  Email: new GraphQLScalarType({
-    name: 'Email',
-    description: 'An email address',
-
-    serialize: (value) => value,
-
-    parseValue: (value) => {
-      const isValid = value.match(/[a-zA-Z0-9._]@[a-z][.]com/g);
-      if (!isValid) throw new Error('Invalid email format');
-
-      return value;
-    },
-
-    parseLiteral: (ast) => ast.value,
-  }),
+  EmailAddress,
+  URL,
+  NonNegativeInt,
 };
 
 module.exports = resolver;

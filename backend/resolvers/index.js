@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 let resolvers = {};
+let queryResolvers = {};
 
 fs.readdirSync('./resolvers')
   .filter(
@@ -13,7 +14,15 @@ fs.readdirSync('./resolvers')
       ...resolvers,
       ...fileResolvers,
     };
+
+    if (!fileResolvers.Query) return;
+
+    queryResolvers = {
+      ...queryResolvers,
+      ...fileResolvers.Query,
+    };
   });
 
+resolvers.Query = queryResolvers;
 
 module.exports = resolvers;

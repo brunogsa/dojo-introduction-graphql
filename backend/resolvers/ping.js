@@ -1,5 +1,7 @@
 const resolver = {
-  ping: () => 'pong',
+  Query: {
+    ping: () => 'pong',
+  },
 };
 
 module.exports = resolver;

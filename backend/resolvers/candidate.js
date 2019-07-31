@@ -1,41 +1,30 @@
-const candidatesData = require('../data-sources/candidates.json');
-
-const getCandidateById = (id) => {
-  const candidate = candidatesData[id];
-  if (!candidate) return null;
-
-  candidate.id = id;
-  return candidate;
-};
-
-const getCandidateByEmail = (email) => {
-  const candidates = Object.keys(candidatesData).map(key => {
-    const candidate = candidatesData[key];
-
-    return {
-      id: key,
-      ...candidate,
-    };
-  });
-
-  return candidates.find(
-    candidate => candidate.email === email,
-  );
-};
+const {
+  getAllCandidates,
+  getCandidateById,
+  getCandidateByEmail,
+} = require('../services/candidates');
 
 const resolver = {
-  candidate: ({ id, email }) => {
-    if (id) return getCandidateById(id);
-    if (email) return getCandidateByEmail(email);
-    throw new Error('Specify either an "id" or the "email"');
+  Query: {
+    candidates: () => getAllCandidates(),
+
+    candidate: (_, params, req, advancedDetails) => {
+      const { id, email } = params;
+
+      if (id) return getCandidateById(id);
+      if (email) return getCandidateByEmail(email);
+      throw new Error('Specify either an "id" or the "email"');
+    },
   },
 
-  Candidate_id: (candidate) => candidate.id,
-  Candidate_name: (candidate) => candidate.name,
-  Candidate_email: (candidate) => candidate.email,
-  Candidate_profession: (candidate) => candidate.profession,
-  Candidate_photo: (candidate) => candidate.photo,
-  Candidate_following: (candidate) => candidate.following,
+  Candidate: {
+    id:         (candidate) => candidate.id,
+    name:       (candidate) => candidate.name,
+    email:      (candidate) => candidate.email,
+    profession: (candidate) => candidate.profession,
+    photo:      (candidate) => candidate.photo,
+    following:  (candidate) => candidate.following.map(getCandidateById),
+  },
 };
 
 module.exports = resolver;

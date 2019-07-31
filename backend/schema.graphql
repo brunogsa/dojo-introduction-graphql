@@ -1,6 +1,6 @@
-scalar Email
+scalar EmailAddress
 scalar URL
-scalar PositiveInt
+scalar NonNegativeInt
 
 enum Profession {
   FRONTEND
@@ -14,35 +14,47 @@ enum Profession {
 type Candidate {
   id: ID!
   name: String!
-  email: Email!
+  email: EmailAddress!
   profession: Profession!
   photo: URL!
-  following: [ID!]!
+  following: [Candidate!]!
 }
 
 type Company {
   id: ID!
   name: String!
   photo: URL!
-  openJobAds: [ID!]!
+  openJobAds: [JobAd!]!
 }
 
 type JobAd {
   id: ID!
   title: String!
   description: String
-  forCompany: ID!
+  forCompany: Company!
   requiredProfession: Profession!
-  remainingVacancies: PositiveInt
+  remainingVacancies: NonNegativeInt!
 }
 
 type Query {
   """Returns an incredible expected response"""
   ping: String!
 
-  """Get a candidate by either `id` or `email`"""
-  candidate(id: ID, email: Email): Candidate
+  """Get all candidates"""
+  candidates: [Candidate!]!
 
-  # TODO: company query
-  # TODO: jobAd query
+  """Get a candidate by either `id` or `email`"""
+  candidate(id: ID, email: EmailAddress): Candidate
+
+  """Get all companies"""
+  companies: [Company!]!
+
+  """Get a specific company"""
+  company(id: ID!): Company
+
+  """Get all job ads"""
+  jobAds: [JobAd!]!
+
+  """Get a specific job ad"""
+  jobAd(id: ID!): JobAd
 }
