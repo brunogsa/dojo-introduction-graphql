@@ -50,7 +50,12 @@ const jobAd = {
 };
 ```
 
-Build your GraphQL schema at `schema.graphql` file!
+You may check `data-sources/` folder for more details about how is your data.
+
+Your first step is to build your GraphQL schema at `schema.graphql` file!
+
+Reference:
+- https://graphql.org/learn/schema/
 
 You can test it with:
 ```sh
@@ -58,20 +63,27 @@ $ npm install
 $ npm run lint:graphql
 ```
 
-Reference:
-- https://graphql.org/learn/schema/
-
 Solution on branch `solution/1`.
 
 
 ## Hands-on 2/3: My first Resolver
 
-Now, implement some basic resolvers `resolvers/` folder.
+Resolvers are functions that tell GraphQL how to provide your data.  
+- You need 1 resolver for each query
+- You need 1 resolver for each field of a type you defined in your `schema.graphql`
 
-You can test it with:
+Now, you want to enable 3 queries for your users:
+- `candidates`
+- `companies`
+- `jobAds`
+
+For that, implement those basic resolvers at `resolvers/` folder, using the imported functions
+from your `services/` folder.
+
+You can test your resolvers with:
 ```sh
-$ npm start               # http://localhost:3000/graphql
-$ npm run test:graphql
+$ npm start               # Manually at http://localhost:3000/graphql
+$ npm run test:graphql    # Automatically
 ```
 
 Reference:
@@ -83,8 +95,12 @@ Solution on branch `solution/2`.
 
 ## Hands-on 3/3: Passing parameters to Resolvers
 
-Implement the new resolvers at `resolvers/` folder.  
-More tests were added, so feel free to run the same scripts :)
+Implement 3 new queries for your users:
+- One that retrieves data from a `candidate`, either by `id` or `email`
+- One that retrieves data from a `company`, given its `id`
+- One that retrieves data from a `jobAd`, given its `id`
+
+More automated tests were added, so feel free to run the same scripts :)
 
 Reference:
 - https://graphql.org/graphql-js/passing-arguments/
