@@ -50,11 +50,10 @@ const jobAd = {
 };
 ```
 
-Build your GraphQL schema at `backend/schema.graphql`!
+Build your GraphQL schema at `schema.graphql` file!
 
 You can test it with:
 ```sh
-$ cd backend/
 $ npm install
 $ npm run lint:graphql
 ```
@@ -62,57 +61,33 @@ $ npm run lint:graphql
 Reference:
 - https://graphql.org/learn/schema/
 
-Solution on branch `solution/schema`.
+Solution on branch `solution/1`.
 
 
-## Hands-on 2/3: Plugging GraphQL into your Back-end
+## Hands-on 2/3: My first Resolver
 
-Now, implement your resolvers at `backend/resolvers/`!
+Now, implement some basic resolvers `resolvers/` folder.
 
 You can test it with:
 ```sh
-$ cd backend/
-$ npm install
+$ npm start               # http://localhost:3000/graphql
 $ npm run test:graphql
 ```
 
 Reference:
 - https://graphql.org/learn/execution/
 - https://graphql.org/graphql-js/basic-types/
+
+Solution on branch `solution/2`.
+
+
+## Hands-on 3/3: Passing parameters to Resolvers
+
+Implement the new resolvers at `resolvers/` folder.  
+More tests were added, so feel free to run the same scripts :)
+
+Reference:
 - https://graphql.org/graphql-js/passing-arguments/
 - https://graphql.org/graphql-js/object-types/
 
-Solution on branch `solution/backend`.
-
-
-## Hands-on 3/3: GraphiQL and Plugging GraphQL into your Front-end
-
-First, let's explore your GraphQL API on the server:
-```sh
-# Up your API
-$ cd backend/
-$ npm install
-$ npm start
-
-# Starts GraphiQL, an amazing tool
-$ cd frontend/
-$ npm install
-$ npm run graphiql  # Now try some GraphQL queries at localhost:6666
-```
-
-Now, starts your Front-end:
-```sh
-$ cd frontend/
-$ npm install
-$ npm start  # Go to localhost:8080 to see the available candidate profiles!
-```
-
-No data, right? :B
-
-Go and implement your GraphQL query at `frontend/services/candidate-profiles.js`!  
-Test if it worked reloading your app!
-
-Reference:
-- ?
-
-Solution on branch `solution/frontend`.
+Solution on branch `solution/3`.
