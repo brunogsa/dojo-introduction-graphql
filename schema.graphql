@@ -39,8 +39,4 @@ type JobAd {
 type Query {
   """Returns an incredible expected response"""
   ping: String!
-
-  # TODO candidates
-  # TODO companies
-  # TODO jobAds
 }
