@@ -1,6 +1,6 @@
 # Dojo: Introduction to GraphQL
 
-This repository contains some GraphQL code on both Back and Front-end.  
+This repository contains some GraphQL code that covers its usage on Back-End (plus GraphiQL).
 [Presentation Link](https://docs.google.com/presentation/d/1WWR-qqHBP7BG0Ayw0qsCrlBxEELzQ-T9yhizL9baWzs/edit?usp=sharing).
 
 
